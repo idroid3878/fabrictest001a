@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7F01E1671CC14D6A00663960 /* Fabric.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7F01E1651CC14D6A00663960 /* Fabric.framework */; };
+		7F01E1681CC14D6A00663960 /* Crashlytics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7F01E1661CC14D6A00663960 /* Crashlytics.framework */; };
 		7FC7D8501CC14D1400DBF044 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 7FC7D84F1CC14D1400DBF044 /* main.m */; };
 		7FC7D8531CC14D1400DBF044 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 7FC7D8521CC14D1400DBF044 /* AppDelegate.m */; };
 		7FC7D8561CC14D1400DBF044 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7FC7D8551CC14D1400DBF044 /* ViewController.m */; };
@@ -16,6 +18,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		7F01E1651CC14D6A00663960 /* Fabric.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Fabric.framework; sourceTree = "<group>"; };
+		7F01E1661CC14D6A00663960 /* Crashlytics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Crashlytics.framework; sourceTree = "<group>"; };
 		7FC7D84B1CC14D1400DBF044 /* apptest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = apptest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7FC7D84F1CC14D1400DBF044 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		7FC7D8511CC14D1400DBF044 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -33,6 +37,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7F01E1681CC14D6A00663960 /* Crashlytics.framework in Frameworks */,
+				7F01E1671CC14D6A00663960 /* Fabric.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -44,6 +50,8 @@
 			children = (
 				7FC7D84D1CC14D1400DBF044 /* apptest */,
 				7FC7D84C1CC14D1400DBF044 /* Products */,
+				7F01E1651CC14D6A00663960 /* Fabric.framework */,
+				7F01E1661CC14D6A00663960 /* Crashlytics.framework */,
 			);
 			sourceTree = "<group>";
 		};
@@ -89,6 +97,7 @@
 				7FC7D8471CC14D1400DBF044 /* Sources */,
 				7FC7D8481CC14D1400DBF044 /* Frameworks */,
 				7FC7D8491CC14D1400DBF044 /* Resources */,
+				7F01E1641CC14D4600663960 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -143,6 +152,22 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		7F01E1641CC14D4600663960 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "./Fabric.framework/run bdcba0970b77fb61af1812c9ef84e3639f917b71 0543e078d79d27d8b3ea66aea637cbb6befa905d3b8c7e6ce70c6e2716632b41";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		7FC7D8471CC14D1400DBF044 /* Sources */ = {
@@ -263,7 +288,12 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = apptest/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.hubub.apptest;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -274,7 +304,12 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = apptest/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.hubub.apptest;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -300,6 +335,7 @@
 				7FC7D8641CC14D1400DBF044 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
